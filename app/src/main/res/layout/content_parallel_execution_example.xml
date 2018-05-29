@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.java.rx.ParallelExecutionExampleActivity"
+    tools:showIn="@layout/activity_parallel_execution_example">
+
+
+    <TextView
+        android:id="@+id/textview_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_data">
+        >
+
+        <LinearLayout
+            android:id="@+id/button_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_new_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Thread Ex"
+                />
+
+            <Button
+                android:id="@+id/button_multiple_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Multiple Thread Ex"
+                />
+
+            <Button
+                android:id="@+id/button_using_computation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parallel Execution Using Computation"
+                />
+            <Button
+                android:id="@+id/button_max_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Max Parallel Thread Ex"
+                />
+
+            <Button
+                android:id="@+id/button_max_thread_io"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Max Parallel Thread with IO"
+                />
+
+            <Button
+                android:id="@+id/button_max_thread_with_avl_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Max Parallel Thread with Available Thread"
+                />
+
+
+            <TextView
+                android:id="@+id/textview_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="result"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="center"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

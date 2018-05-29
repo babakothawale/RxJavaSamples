@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RxSample</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_parallel_execution_example">ParallelExecutionExampleActivity
+    </string>
+    <string name="update_user">Insert User</string>
+    <string name="title_activity_back_pressure_example">BackPressureExampleActivity</string>
+    <string name="title_activity_conditional_opt">ConditionalOptActivity</string>
+</resources>

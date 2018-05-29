@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.java.rx">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.java.rx.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.java.rx.RxAndroidActivity" />
+        <activity
+            android:name="com.java.rx.ParallelExecutionExampleActivity"
+            android:label="@string/title_activity_parallel_execution_example"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.java.rx.CombiningOptActivity" />
+        <activity android:name="com.java.rx.TransformationOptActivity" />
+        <activity android:name="com.java.rx.FilterOptActivity" />
+        <activity android:name="com.java.rx.CreationalOptActivity" />
+        <activity android:name="com.baba.rx.rxroom.ui.RoomActivity" />
+        <activity
+            android:name="com.java.rx.BackPressureExampleActivity"
+            android:label="@string/title_activity_back_pressure_example"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.java.rx.ConditionalOptActivity"
+            android:label="@string/title_activity_conditional_opt"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

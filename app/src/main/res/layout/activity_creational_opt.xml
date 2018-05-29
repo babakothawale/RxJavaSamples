@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.java.rx.CreationalOptActivity">
+
+    <TextView
+        android:id="@+id/textview_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="result"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_data" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_result">
+
+        <LinearLayout
+            android:id="@+id/button_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_just"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Just"
+                />
+
+            <Button
+                android:id="@+id/button_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                />
+
+            <Button
+                android:id="@+id/button_iterable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From iterable"
+                />
+
+            <Button
+                android:id="@+id/button_array"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From Array"
+                />
+
+            <Button
+                android:id="@+id/button_callable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From Callable"
+                />
+
+            <Button
+                android:id="@+id/button_connectible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connectible/Publish"
+                />
+            <Button
+                android:id="@+id/button_cache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cache Observer 1"
+                />
+            <Button
+                android:id="@+id/button_cache1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cache Observer 2 "
+                />
+
+            <Button
+                android:id="@+id/button_refcount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RefCount obsvr 1"
+                />
+            <Button
+                android:id="@+id/button_refcount2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RefCount obsvr 2 "
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
