@@ -1,16 +1,11 @@
 package com.java.rx;
 
 
-import android.util.Log;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Function;
-import io.reactivex.observables.GroupedObservable;
 import io.reactivex.schedulers.Schedulers;
-
-import static android.content.ContentValues.TAG;
 
 public class TransformationOperators {
 
@@ -39,7 +34,8 @@ public class TransformationOperators {
                              }
                          }
                 )
-                .subscribeOn(Schedulers.io());
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread());
     }
 
     /**

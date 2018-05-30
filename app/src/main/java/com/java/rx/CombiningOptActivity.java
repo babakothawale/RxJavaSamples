@@ -26,7 +26,7 @@ public class CombiningOptActivity extends AppCompatActivity {
         mTextViewResult = findViewById(R.id.textview_result);
 
         RxView.clicks(findViewById(R.id.button_merge))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -34,7 +34,7 @@ public class CombiningOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_zip))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -42,7 +42,7 @@ public class CombiningOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_combinelatest))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {

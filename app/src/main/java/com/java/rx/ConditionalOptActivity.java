@@ -27,7 +27,7 @@ public class ConditionalOptActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         mTextViewResult = findViewById(R.id.textview_result);
         RxView.clicks(findViewById(R.id.button_repeat_when))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -36,7 +36,7 @@ public class ConditionalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_take_until))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -45,7 +45,7 @@ public class ConditionalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_take_while))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })

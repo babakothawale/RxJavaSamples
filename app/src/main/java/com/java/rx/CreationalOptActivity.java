@@ -34,7 +34,7 @@ public class CreationalOptActivity extends AppCompatActivity {
         mTextViewResult = findViewById(R.id.textview_result);
 
         RxView.clicks(findViewById(R.id.button_just))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -43,7 +43,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_create))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -52,7 +52,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_iterable))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -61,7 +61,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_array))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -69,7 +69,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                     callFromArray();
                 });
         RxView.clicks(findViewById(R.id.button_callable))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -78,7 +78,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_connectible))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -87,7 +87,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_cache))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -96,7 +96,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_cache1))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -104,7 +104,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                     callOptCache2();
                 });
         RxView.clicks(findViewById(R.id.button_refcount))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })
@@ -112,7 +112,7 @@ public class CreationalOptActivity extends AppCompatActivity {
                     callRefCount1();
                 });
         RxView.clicks(findViewById(R.id.button_refcount2))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error) -> {
                 })

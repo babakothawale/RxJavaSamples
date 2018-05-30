@@ -9,13 +9,14 @@ import com.jakewharton.rxbinding.view.RxView;
 import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observer;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 
 public class TransformationOptActivity extends AppCompatActivity {
 
     private static final String TAG = TransformationOptActivity.class.getSimpleName();
-    Disposable disposable;
-    TextView mTextViewResult;
+    private CompositeDisposable disposables = new CompositeDisposable();
+    private TextView mTextViewResult;
 
 
     @Override
@@ -26,7 +27,7 @@ public class TransformationOptActivity extends AppCompatActivity {
         mTextViewResult = findViewById(R.id.textview_result);
 
         RxView.clicks(findViewById(R.id.button_map))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -34,7 +35,7 @@ public class TransformationOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_flatmap))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -42,7 +43,7 @@ public class TransformationOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_concatmap))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -50,7 +51,7 @@ public class TransformationOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_switchmap))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -58,7 +59,7 @@ public class TransformationOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_buffer))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -89,24 +90,30 @@ public class TransformationOptActivity extends AppCompatActivity {
         return new Observer<Object>() {
             @Override
             public void onSubscribe(Disposable d) {
-                disposable = d;
+                disposables.add(d);
                 mTextViewResult.setText("");
             }
 
             @Override
             public void onNext(Object object) {
-                mTextViewResult.setText(mTextViewResult.getText() + " " + String.valueOf(object));
+                mTextViewResult.append(" " + String.valueOf(object));
             }
 
             @Override
             public void onError(Throwable e) {
-                mTextViewResult.setText(mTextViewResult.getText() + " error");
+                mTextViewResult.append(" error :: " + e.getMessage());
             }
 
             @Override
             public void onComplete() {
-                mTextViewResult.setText(mTextViewResult.getText() + " onComplete");
+                mTextViewResult.append("onComplete");
             }
         };
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        disposables.clear();
     }
 }

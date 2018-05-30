@@ -19,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.java.rx.RxAndroidActivity" />
+        <activity android:name="com.java.rx.SearchExampleActivity" />
         <activity
             android:name="com.java.rx.ParallelExecutionExampleActivity"
             android:label="@string/title_activity_parallel_execution_example"
