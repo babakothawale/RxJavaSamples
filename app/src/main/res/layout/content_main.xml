@@ -92,6 +92,13 @@
                 android:layout_height="wrap_content"
                 android:text="Conditional Operators"
                 />
+
+            <Button
+                android:id="@+id/button_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                />
         </LinearLayout>
     </ScrollView>
 

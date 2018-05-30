@@ -26,7 +26,7 @@ public class FilterOptActivity extends AppCompatActivity {
         mTextViewResult = findViewById(R.id.textview_result);
 
         RxView.clicks(findViewById(R.id.button_filter))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -34,7 +34,7 @@ public class FilterOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_take))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -42,7 +42,7 @@ public class FilterOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_takelast))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -50,7 +50,7 @@ public class FilterOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_first))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -58,7 +58,7 @@ public class FilterOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_elementat))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {
@@ -66,7 +66,7 @@ public class FilterOptActivity extends AppCompatActivity {
                 });
 
         RxView.clicks(findViewById(R.id.button_skip))
-                .debounce(600, TimeUnit.MILLISECONDS)
+                .debounce(300, TimeUnit.MILLISECONDS)
                 .observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())
                 .doOnError((error)->{})
                 .subscribe(aVoid -> {

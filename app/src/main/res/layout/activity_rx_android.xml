@@ -6,24 +6,18 @@
     android:orientation="vertical"
     tools:context="com.java.rx.MainActivity" >
 
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button" />
-
-    <EditText
-        android:layout_width="wrap_content"
+    <SearchView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Type here"
-        android:ems="10"
+        android:queryHint="Type here"
         android:id="@+id/editText" />
 
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:textSize="18sp"/>
 
 </LinearLayout>

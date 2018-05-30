@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
                     intentConditionalOptActivity();
                 });
 
+        RxView.clicks(findViewById(R.id.button_search))
+                .subscribe(aVoid -> {
+                    startActivity(new Intent(this, SearchExampleActivity.class));
+                });
     }
 
     private void intentCombineOptActivity(){
