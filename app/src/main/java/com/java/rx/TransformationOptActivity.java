@@ -96,7 +96,7 @@ public class TransformationOptActivity extends AppCompatActivity {
 
             @Override
             public void onNext(Object object) {
-                mTextViewResult.append(String.valueOf(object));
+                mTextViewResult.append(" " + String.valueOf(object));
             }
 
             @Override
